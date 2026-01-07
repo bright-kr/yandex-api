@@ -1,11 +1,11 @@
 # Yandex Search Scraper
 
-[![Promo](https://media.brightdata.com/2025/08/SERP-API-50-off-GitHub-banner_1389_166.png)](https://brightdata.com/products/serp-api/yandex-search)
+[![Promo](https://media.brightdata.com/2025/08/SERP-API-50-off-GitHub-banner_1389_166.png)](https://brightdata.co.kr/products/serp-api/yandex-search)
 
-This repository offers two reliable solutions for extracting data from Yandex Search Engine Results Pages (SERPs):
+이 리포지토리는 Yandex Search Engine Results Pages(SERP)에서 데이터를 추출하기 위한 신뢰할 수 있는 두 가지 솔루션을 제공합니다:
 
-- **Free Yandex Scraper:** A basic tool for scraping Yandex Search Results at small scale
-- **Enterprise-grade Yandex SERP API:** A scalable, production-ready solution for high-volume, real-time data extraction (part of [Bright Data's SERP Scraper API](https://brightdata.com/products/serp-api))
+- **무료 Yandex Scraper:** 소규모로 Yandex 검색 결과를 スクレイピング하기 위한 기본 도구입니다
+- **엔터프라이즈급 Yandex SERP API:** 대용량, 실시간 데이터 추출을 위한 확장 가능하고 프로덕션 준비가 된 솔루션입니다([Bright Data's SERP Scraper API](https://brightdata.co.kr/products/serp-api)의 일부입니다)
 
 ## Table of Contents
 - [Free Yandex SERP Scraper](#free-yandex-serp-scraper)
@@ -29,29 +29,29 @@ This repository offers two reliable solutions for extracting data from Yandex Se
 
 ## Free Yandex SERP Scraper
 
-The free scraper provides a straightforward way to collect Yandex SERP data at a small scale. It's perfect for developers needing limited data for personal projects, research, or testing purposes.
+무료 스크레이퍼는 소규모로 Yandex SERP 데이터를 수집할 수 있는 간단한 방법을 제공합니다. 개인 프로젝트, 연구 또는 테스트 목적을 위해 제한된 데이터가 필요한 개발자에게 적합합니다.
 
 <img width="800" alt="free-yandex-serp-scraper" src="https://github.com/luminati-io/yandex-api/blob/main/images/428371413-775c71f6-10cf-4a2d-91b8-6f137db5b171.png" />
 
 ### Setup Requirements
 
 - [Python 3.9+](https://www.python.org/downloads/)
-- Required packages:
-    - `playwright` for browser automation
-    - `BeautifulSoup` for HTML parsing
+- 필수 패키지:
+    - 브라우저 자동화를 위한 `playwright`
+    - HTML 파싱을 위한 `BeautifulSoup`
 
 ```bash
 pip install playwright beautifulsoup4
 playwright install
 ```
 
-> **New to web scraping?** Explore our [Beginner's Guide to Web Scraping with Python](https://brightdata.com/blog/how-tos/web-scraping-with-python)
+> **Webスクレイピング이 처음이신가요?** [Beginner's Guide to Web Scraping with Python](https://brightdata.co.kr/blog/how-tos/web-scraping-with-python)을 확인해 보시기 바랍니다.
 >
 
 ### Quick Start Guide
 
-1. Open [yandex-search-results-scraper.py](https://github.com/luminati-io/yandex-api/blob/main/yandex-serp-scraper/yandex-serp-scraper.py)
-2. Customize the search terms and page count variables:
+1. [yandex-search-results-scraper.py](https://github.com/luminati-io/yandex-api/blob/main/yandex-serp-scraper/yandex-serp-scraper.py)를 여십시오
+2. 검색어 및 페이지 수 변수를 사용자 지정하십시오:
 
 ```python
 PAGES_PER_TERM = {
@@ -59,61 +59,61 @@ PAGES_PER_TERM = {
 }
 ```
 
-3. Run the script
+3. 스크립트를 실행하십시오
 
 ### Sample Output
 <img width="800" alt="yandex-scraper-output" src="https://github.com/luminati-io/yandex-api/blob/main/images/428371812-dbd6f456-af64-4a4a-8735-f26876ae5fa8.png" />
 
 
 ### Limitations
-One of the biggest challenges when scraping Yandex is its aggressive CAPTCHA protection:
+Yandex를 スクレイピング할 때 가장 큰 과제 중 하나는 공격적인 CAPTCHA 보호입니다:
 
 <img width="800" alt="yandex-captcha-challenge" src="https://github.com/luminati-io/yandex-api/blob/main/images/428371880-309e645f-c043-4231-aeb2-c3417e91b15e.png" />
 
 
-Yandex uses a strict and constantly evolving anti-bot system to prevent automated data extraction. Frequent CAPTCHA triggers can quickly lead to IP blocks, making it tough to maintain stable, long-running scrapers.
+Yandex는 자동화된 데이터 추출을 방지하기 위해 엄격하고 지속적으로 진화하는 アンチボット 시스템을 사용합니다. CAPTCHA가 자주 트리거되면 빠르게 IP 차단으로 이어질 수 있어, 안정적이고 장시간 실행되는 스크레이퍼를 유지하기가 어렵습니다.
 
-While the free scraper handles basic tasks, it has several important limitations:
+무료 스크레이퍼는 기본 작업을 처리하지만, 다음과 같은 중요한 제한 사항이 있습니다:
 
-- High risk of IP blocking
-- Limited request volume
-- Constant CAPTCHA interruptions
-- Not suitable for production environments
+- IP 차단 위험이 높습니다
+- リクエスト 볼륨이 제한됩니다
+- CAPTCHA 중단이 지속적으로 발생합니다
+- 프로덕션 환경에 적합하지 않습니다
 
-For a scalable and stable solution, consider Bright Data's dedicated API detailed below. 👇
+확장 가능하고 안정적인 솔루션을 원하신다면, 아래에 설명된 Bright Data의 전용 API를 고려해 보시기 바랍니다. 👇
 
 
 ## Yandex SERP Scraper API
 
-The [Yandex Search API](https://brightdata.com/products/serp-api/yandex-search) is part of Bright Data’s [SERP Scraping API](https://brightdata.com/products/serp-api) suite. It leverages our industry-leading [proxy infrastructure](https://brightdata.com/proxy-types) to deliver real-time Yandex search results with a single API call.
+[Yandex Search API](https://brightdata.co.kr/products/serp-api/yandex-search)는 Bright Data의 [SERP Scraping API](https://brightdata.co.kr/products/serp-api) 제품군의 일부입니다. 업계 선도적인 [プロキシ 인프라](https://brightdata.co.kr/proxy-types)를 활용하여 단 한 번의 API 호출로 실시간 Yandex 검색 결과를 제공합니다.
 
 ### Key Benefits
 
-- **Global Accuracy**: Get tailored results for specific locations worldwide
-- **Pay-Per-Success**: Only pay for successful requests
-- **Real-Time Data**: Access up-to-date search results in seconds
-- **Unlimited Scalability**: Handle high-volume scraping effortlessly
-- **Cost-Efficient**: Eliminates the need for costly infrastructure
-- **Reliable Performance**: Built-in anti-blocking technology
-- **24/7 Expert Support**: Access to technical assistance whenever needed
+- **Global Accuracy**: 전 세계 특정 지역에 맞춘 결과를 얻을 수 있습니다
+- **Pay-Per-Success**: 성공한 リクエスト에 대해서만 비용을 지불합니다
+- **Real-Time Data**: 최신 검색 결과를 몇 초 내로 액세스할 수 있습니다
+- **Unlimited Scalability**: 대용량 スクレイピング을 손쉽게 처리합니다
+- **Cost-Efficient**: 비용이 많이 드는 인프라 필요성을 제거합니다
+- **Reliable Performance**: 내장된 차단 방지 기술을 제공합니다
+- **24/7 Expert Support**: 필요 시 언제든지 기술 지원을 받을 수 있습니다
 
- 📌 Try Before You Buy: Test it for free in our SERP API Live Demo
+ 📌 Try Before You Buy: SERP API Live Demo에서 무료로 테스트해 보시기 바랍니다
  
  <img width="800" alt="bright-data-serp-api-playground" src="https://github.com/luminati-io/yandex-api/blob/main/images/428391143-c089343e-50a8-4961-8d11-d312982480df.png" />
 
 
 ### Getting Started
 
-1. [Create a Bright Data account](https://brightdata.com/) (new users receive a $5 credit)
-2. Generate your [API key](https://docs.brightdata.com/general/account/api-token)
-3. Follow our [step-by-step guide](https://github.com/luminati-io/yandex-api/blob/main/setup-serp-api-guide.md) to configure the SERP API
+1. [Bright Data account를 생성](https://brightdata.co.kr/)하십시오(신규 사용자는 $5 크레딧을 받습니다)
+2. [API key](https://docs.brightdata.com/general/account/api-token)를 생성하십시오
+3. [단계별 가이드](https://github.com/luminati-io/yandex-api/blob/main/setup-serp-api-guide.md)를 따라 SERP API를 구성하십시오
 
 
 ## Implementation Methods
 
 ### Direct API Access
 
-The simplest way to use the API is by making a direct request to Bright Data's API endpoint.
+API를 사용하는 가장 간단한 방법은 Bright Data의 API エンドポイント로 직접 リクエスト를 보내는 것입니다.
 
 **cURL Example:**
 
@@ -154,7 +154,7 @@ print("Response saved!")
 
 ### Native Proxy-Based Access
 
-This alternative method uses proxy routing for direct access to search results.
+이 대체 방법은 검색 결과에 직접 액세스하기 위해 プロキシ 라우팅을 사용합니다.
 
 **cURL Example:**
 
@@ -191,12 +191,12 @@ with open("yandex-scraper-api-result.html", "w", encoding="utf-8") as file:
 print("Response saved!")
 ```
 
-> **Note:** When using the native proxy approach, it's recommended to install Bright Data's SSL certificate for production use. Learn more in the [SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate).
+> **Note:** 네이티브 プロキシ 접근 방식을 사용할 때에는, 프로덕션 사용을 위해 Bright Data의 SSL 인증서를 설치하는 것을 권장합니다. 자세한 내용은 [SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate)에서 확인하십시오.
 > 
 
-👉 See the [full HTML output](https://github.com/luminati-io/yandex-api/blob/main/yandex-scraper-api-output/yandex-scraper-api-result.html)
+👉 [full HTML output](https://github.com/luminati-io/yandex-api/blob/main/yandex-scraper-api-output/yandex-scraper-api-result.html)을 확인해 보시기 바랍니다
 
-*The query parameters like `lr` and `lang` are explained in the next section.*
+*`lr` 및 `lang`과 같은 쿼리 パラメータ는 다음 섹션에서 설명합니다.*
 
 
 ## Yandex Search Query Parameters
@@ -205,7 +205,7 @@ print("Response saved!")
 
 #### Region (`lr`)
 
-This parameter defines which geographic region or country to target for search results.
+이 パラメータ는 검색 결과에 대해 타겟팅할 지리적 지역 또는 국가를 정의합니다.
 
 | Region | Code |
 | --- | --- |
@@ -215,7 +215,7 @@ This parameter defines which geographic region or country to target for search r
 | Canada | 95 |
 | China | 134 |
 
-Example - Check how "best wireless earbuds" ranks in the USA:
+예시 - "best wireless earbuds"가 USA에서 어떻게 랭크되는지 확인하십시오:
 
 ```bash
 curl --proxy brd.superproxy.io:33335 \
@@ -225,13 +225,13 @@ curl --proxy brd.superproxy.io:33335 \
 
 #### Language (`lang`)
 
-Sets the language preference using two-letter language codes:
+두 글자 언어 코드를 사용하여 언어 선호도를 설정합니다:
 
-- `lang=en` - English
-- `lang=es` - Spanish
-- `lang=fr` - French
+- `lang=en` - 영어
+- `lang=es` - 스페인어
+- `lang=fr` - 프랑스어
 
-Example - Get sports news in Spanish:
+예시 - 스페인어로 스포츠 뉴스를 가져옵니다:
 
 ```bash
 https://www.yandex.com/search/?text=local+sports+news&lang=es
@@ -241,15 +241,15 @@ https://www.yandex.com/search/?text=local+sports+news&lang=es
 
 #### Page Number (`p`)
 
-Controls which page of results to display:
+표시할 결과 페이지를 제어합니다:
 
-- `p=0` - First page (default)
-- `p=1` - Second page
-- `p=4` - Fifth page
+- `p=0` - 첫 번째 페이지(기본값)
+- `p=1` - 두 번째 페이지
+- `p=4` - 다섯 번째 페이지
 
-Each Yandex SERP page typically returns 10 results.
+각 Yandex SERP 페이지는 일반적으로 10개의 결과를 반환합니다.
 
-Example - Scrape page 3 (results 21-30) for "nike running shoes":
+예시 - "nike running shoes"에 대해 3페이지(결과 21-30)를 スクレイピング하십시오:
 
 ```bash
 https://www.yandex.com/search/?text=nike+running+shoes&p=2
@@ -259,13 +259,13 @@ https://www.yandex.com/search/?text=nike+running+shoes&p=2
 
 #### Time Period (`within`)
 
-Limits results to a specific time period:
+결과를 특정 기간으로 제한합니다:
 
-- `within=77` - Results from the past 24 hours
-- `within=1` - Results from the past 2 weeks
-- `within=[%pm]` - Results from the past month
+- `within=77` - 지난 24시간의 결과
+- `within=1` - 지난 2주간의 결과
+- `within=[%pm]` - 지난 한 달의 결과
 
-Example - Get "iPhone 15 review" results from the past 24 hours:
+예시 - 지난 24시간의 "iPhone 15 review" 결과를 가져옵니다:
 
 ```bash
 https://www.yandex.com/search/?text=iphone+15+review&within=77
@@ -275,16 +275,16 @@ https://www.yandex.com/search/?text=iphone+15+review&within=77
 
 #### Device Type (`brd_mobile`)
 
-Specifies which device type to simulate:
+시뮬레이션할 디바이스 유형을 지정합니다:
 
-- `brd_mobile=0` or omitted - Random desktop user-agent
-- `brd_mobile=1` - Random mobile user-agent
-- `brd_mobile=ios` or `brd_mobile=iphone` - iPhone user-agent
-- `brd_mobile=ipad` or `brd_mobile=ios_tablet` - iPad user-agent
-- `brd_mobile=android` - Android phone user-agent
-- `brd_mobile=android_tablet` - Android tablet user-agent
+- `brd_mobile=0` 또는 생략 - 랜덤 데스크톱 user-agent
+- `brd_mobile=1` - 랜덤 모바일 user-agent
+- `brd_mobile=ios` 또는 `brd_mobile=iphone` - iPhone user-agent
+- `brd_mobile=ipad` 또는 `brd_mobile=ios_tablet` - iPad user-agent
+- `brd_mobile=android` - Android 폰 user-agent
+- `brd_mobile=android_tablet` - Android 태블릿 user-agent
 
-Example - Simulate an iPhone searching for responsive website testing:
+예시 - 반응형 웹사이트 테스트를 검색하는 iPhone을 시뮬레이션합니다:
 
 ```bash
 https://www.yandex.com/search/?text=responsive+website+testing&brd_mobile=ios
@@ -292,25 +292,25 @@ https://www.yandex.com/search/?text=responsive+website+testing&brd_mobile=ios
 
 #### Browser Type (`brd_browser`)
 
-Defines which browser to simulate:
+시뮬레이션할 브라우저를 정의합니다:
 
-- Default (omitted) - Random browser
+- 기본값(생략) - 랜덤 브라우저
 - `brd_browser=chrome` - Google Chrome
 - `brd_browser=safari` - Safari
 - `brd_browser=firefox` - Mozilla Firefox
 
-Example - Simulate Safari browser searching for Python tutorials:
+예시 - Python 튜토리얼을 검색하는 Safari 브라우저를 시뮬레이션합니다:
 
 ```bash
 https://www.yandex.com/search/?text=how+to+learn+python&brd_browser=safari
 ```
 
-> **Note:** Don't combine `brd_browser=firefox` with `brd_mobile=1` as they're incompatible.
+> **Note:** `brd_browser=firefox`와 `brd_mobile=1`은 호환되지 않으므로 함께 사용하지 마십시오.
 > 
 
 ## **Practical Example**
 
-For comprehensive targeting, you can combine multiple parameters:
+포괄적인 타겟팅을 위해 여러 パラメータ를 결합할 수 있습니다:
 
 ```bash
 https://www.yandex.com/search/?text=organic+skincare+products
@@ -322,16 +322,16 @@ https://www.yandex.com/search/?text=organic+skincare+products
 &brd_browser=safari
 ```
 
-This search:
+이 검색은 다음을 수행합니다:
 
-- Targets Canadian users (`lr=95`)
-- Shows English results (`lang=en`)
-- Displays the second page (`p=2`)
-- Limits to the past 2 weeks (`within=1`)
-- Simulates an iPhone user (`brd_mobile=ios`)
-- Uses Safari browser (`brd_browser=safari`)
+- 캐나다 사용자 타겟팅(`lr=95`)
+- 영어 결과 표시(`lang=en`)
+- 두 번째 페이지 표시(`p=2`)
+- 지난 2주로 제한(`within=1`)
+- iPhone 사용자 시뮬레이션(`brd_mobile=ios`)
+- Safari 브라우저 사용(`brd_browser=safari`)
 
-Perfect for a skincare company researching recent organic product trends in the Canadian market as viewed by iOS mobile users.
+iOS 모바일 사용자가 보는 관점에서 캐나다 시장의 최근 유기농 제품 트렌드를 조사하려는 스킨케어 회사에 적합합니다.
 
 
 ## Support & Resources
@@ -347,7 +347,7 @@ Perfect for a skincare company researching recent organic product trends in the 
     - [Google Flights API](https://github.com/luminati-io/google-flights-api)
     - [Web Unlocker API](https://github.com/luminati-io/web-unlocker-api)
 - **Use Cases:**
-    - [SEO & SERP Tracking](https://brightdata.com/use-cases/serp-tracking)
-    - [Travel Industry Data](https://brightdata.com/use-cases/travel)
-- **Additional Reading:** [Best SERP APIs](https://brightdata.com/blog/web-data/best-serp-apis)
+    - [SEO & SERP Tracking](https://brightdata.co.kr/use-cases/serp-tracking)
+    - [Travel Industry Data](https://brightdata.co.kr/use-cases/travel)
+- **Additional Reading:** [Best SERP APIs](https://brightdata.co.kr/blog/web-data/best-serp-apis)
 - **Contact Support:** [support@brightdata.com](mailto:support@brightdata.com)
