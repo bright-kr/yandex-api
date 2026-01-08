@@ -31,7 +31,7 @@
 
 무료 스크레이퍼는 소규모로 Yandex SERP 데이터를 수집할 수 있는 간단한 방법을 제공합니다. 개인 프로젝트, 연구 또는 테스트 목적을 위해 제한된 데이터가 필요한 개발자에게 적합합니다.
 
-<img width="800" alt="free-yandex-serp-scraper" src="https://github.com/luminati-io/yandex-api/blob/main/images/428371413-775c71f6-10cf-4a2d-91b8-6f137db5b171.png" />
+<img width="800" alt="free-yandex-serp-scraper" src="https://github.com/bright-kr/yandex-api/blob/main/images/428371413-775c71f6-10cf-4a2d-91b8-6f137db5b171.png" />
 
 ### Setup Requirements
 
@@ -50,7 +50,7 @@ playwright install
 
 ### Quick Start Guide
 
-1. [yandex-search-results-scraper.py](https://github.com/luminati-io/yandex-api/blob/main/yandex-serp-scraper/yandex-serp-scraper.py)를 여십시오
+1. [yandex-search-results-scraper.py](https://github.com/bright-kr/yandex-api/blob/main/yandex-serp-scraper/yandex-serp-scraper.py)를 여십시오
 2. 검색어 및 페이지 수 변수를 사용자 지정하십시오:
 
 ```python
@@ -62,13 +62,13 @@ PAGES_PER_TERM = {
 3. 스크립트를 실행하십시오
 
 ### Sample Output
-<img width="800" alt="yandex-scraper-output" src="https://github.com/luminati-io/yandex-api/blob/main/images/428371812-dbd6f456-af64-4a4a-8735-f26876ae5fa8.png" />
+<img width="800" alt="yandex-scraper-output" src="https://github.com/bright-kr/yandex-api/blob/main/images/428371812-dbd6f456-af64-4a4a-8735-f26876ae5fa8.png" />
 
 
 ### Limitations
 Yandex를 スクレイピング할 때 가장 큰 과제 중 하나는 공격적인 CAPTCHA 보호입니다:
 
-<img width="800" alt="yandex-captcha-challenge" src="https://github.com/luminati-io/yandex-api/blob/main/images/428371880-309e645f-c043-4231-aeb2-c3417e91b15e.png" />
+<img width="800" alt="yandex-captcha-challenge" src="https://github.com/bright-kr/yandex-api/blob/main/images/428371880-309e645f-c043-4231-aeb2-c3417e91b15e.png" />
 
 
 Yandex는 자동화된 데이터 추출을 방지하기 위해 엄격하고 지속적으로 진화하는 アンチボット 시스템을 사용합니다. CAPTCHA가 자주 트리거되면 빠르게 IP 차단으로 이어질 수 있어, 안정적이고 장시간 실행되는 스크레이퍼를 유지하기가 어렵습니다.
@@ -99,14 +99,14 @@ Yandex는 자동화된 데이터 추출을 방지하기 위해 엄격하고 지�
 
  📌 Try Before You Buy: SERP API Live Demo에서 무료로 테스트해 보시기 바랍니다
  
- <img width="800" alt="bright-data-serp-api-playground" src="https://github.com/luminati-io/yandex-api/blob/main/images/428391143-c089343e-50a8-4961-8d11-d312982480df.png" />
+ <img width="800" alt="bright-data-serp-api-playground" src="https://github.com/bright-kr/yandex-api/blob/main/images/428391143-c089343e-50a8-4961-8d11-d312982480df.png" />
 
 
 ### Getting Started
 
 1. [Bright Data account를 생성](https://brightdata.co.kr/)하십시오(신규 사용자는 $5 크레딧을 받습니다)
 2. [API key](https://docs.brightdata.com/general/account/api-token)를 생성하십시오
-3. [단계별 가이드](https://github.com/luminati-io/yandex-api/blob/main/setup-serp-api-guide.md)를 따라 SERP API를 구성하십시오
+3. [단계별 가이드](https://github.com/bright-kr/yandex-api/blob/main/setup-serp-api-guide.md)를 따라 SERP API를 구성하십시오
 
 
 ## Implementation Methods
@@ -194,7 +194,7 @@ print("Response saved!")
 > **Note:** 네이티브 プロキシ 접근 방식을 사용할 때에는, 프로덕션 사용을 위해 Bright Data의 SSL 인증서를 설치하는 것을 권장합니다. 자세한 내용은 [SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate)에서 확인하십시오.
 > 
 
-👉 [full HTML output](https://github.com/luminati-io/yandex-api/blob/main/yandex-scraper-api-output/yandex-scraper-api-result.html)을 확인해 보시기 바랍니다
+👉 [full HTML output](https://github.com/bright-kr/yandex-api/blob/main/yandex-scraper-api-output/yandex-scraper-api-result.html)을 확인해 보시기 바랍니다
 
 *`lr` 및 `lang`과 같은 쿼리 パラメータ는 다음 섹션에서 설명합니다.*
 
@@ -338,14 +338,14 @@ iOS 모바일 사용자가 보는 관점에서 캐나다 시장의 최근 유기
 
 - **Documentation:** [SERP API Documentation](https://docs.brightdata.com/scraping-automation/serp-api/)
 - **Related APIs:**
-    - [SERP API](https://github.com/luminati-io/serp-api)
-    - [Google Search API](https://github.com/luminati-io/google-search-api)
-    - [Google News Scraper](https://github.com/luminati-io/Google-News-Scraper)
-    - [Google Trends API](https://github.com/luminati-io/google-trends-api)
-    - [Google Reviews API](https://github.com/luminati-io/google-reviews-api)
-    - [Google Hotels API](https://github.com/luminati-io/google-hotels-api)
-    - [Google Flights API](https://github.com/luminati-io/google-flights-api)
-    - [Web Unlocker API](https://github.com/luminati-io/web-unlocker-api)
+    - [SERP API](https://github.com/bright-kr/serp-api)
+    - [Google Search API](https://github.com/bright-kr/google-search-api)
+    - [Google News Scraper](https://github.com/bright-kr/Google-News-Scraper)
+    - [Google Trends API](https://github.com/bright-kr/google-trends-api)
+    - [Google Reviews API](https://github.com/bright-kr/google-reviews-api)
+    - [Google Hotels API](https://github.com/bright-kr/google-hotels-api)
+    - [Google Flights API](https://github.com/bright-kr/google-flights-api)
+    - [Web Unlocker API](https://github.com/bright-kr/web-unlocker-api)
 - **Use Cases:**
     - [SEO & SERP Tracking](https://brightdata.co.kr/use-cases/serp-tracking)
     - [Travel Industry Data](https://brightdata.co.kr/use-cases/travel)
