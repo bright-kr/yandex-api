@@ -4,7 +4,7 @@
 
 이 리포지토리는 Yandex Search Engine Results Pages(SERP)에서 데이터를 추출하기 위한 신뢰할 수 있는 두 가지 솔루션을 제공합니다:
 
-- **무료 Yandex Scraper:** 소규모로 Yandex 검색 결과를 スクレイピング하기 위한 기본 도구입니다
+- **무료 Yandex Scraper:** 소규모로 Yandex 검색 결과를 스크레이핑하기 위한 기본 도구입니다
 - **엔터프라이즈급 Yandex SERP API:** 대용량, 실시간 데이터 추출을 위한 확장 가능하고 프로덕션 준비가 된 솔루션입니다([Bright Data's SERP Scraper API](https://brightdata.co.kr/products/serp-api)의 일부입니다)
 
 ## Table of Contents
@@ -45,7 +45,7 @@ pip install playwright beautifulsoup4
 playwright install
 ```
 
-> **Webスクレイピング이 처음이신가요?** [Beginner's Guide to Web Scraping with Python](https://brightdata.co.kr/blog/how-tos/web-scraping-with-python)을 확인해 보시기 바랍니다.
+> **Web스크레이핑이 처음이신가요?** [Beginner's Guide to Web Scraping with Python](https://brightdata.co.kr/blog/how-tos/web-scraping-with-python)을 확인해 보시기 바랍니다.
 >
 
 ### Quick Start Guide
@@ -66,17 +66,17 @@ PAGES_PER_TERM = {
 
 
 ### Limitations
-Yandex를 スクレイピング할 때 가장 큰 과제 중 하나는 공격적인 CAPTCHA 보호입니다:
+Yandex를 스크레이핑할 때 가장 큰 과제 중 하나는 공격적인 CAPTCHA 보호입니다:
 
 <img width="800" alt="yandex-captcha-challenge" src="https://github.com/bright-kr/yandex-api/blob/main/images/428371880-309e645f-c043-4231-aeb2-c3417e91b15e.png" />
 
 
-Yandex는 자동화된 데이터 추출을 방지하기 위해 엄격하고 지속적으로 진화하는 アンチボット 시스템을 사용합니다. CAPTCHA가 자주 트리거되면 빠르게 IP 차단으로 이어질 수 있어, 안정적이고 장시간 실행되는 스크레이퍼를 유지하기가 어렵습니다.
+Yandex는 자동화된 데이터 추출을 방지하기 위해 엄격하고 지속적으로 진화하는 안티봇 시스템을 사용합니다. CAPTCHA가 자주 트리거되면 빠르게 IP 차단으로 이어질 수 있어, 안정적이고 장시간 실행되는 스크레이퍼를 유지하기가 어렵습니다.
 
 무료 스크레이퍼는 기본 작업을 처리하지만, 다음과 같은 중요한 제한 사항이 있습니다:
 
 - IP 차단 위험이 높습니다
-- リクエスト 볼륨이 제한됩니다
+- 요청 볼륨이 제한됩니다
 - CAPTCHA 중단이 지속적으로 발생합니다
 - 프로덕션 환경에 적합하지 않습니다
 
@@ -85,14 +85,14 @@ Yandex는 자동화된 데이터 추출을 방지하기 위해 엄격하고 지�
 
 ## Yandex SERP Scraper API
 
-[Yandex Search API](https://brightdata.co.kr/products/serp-api/yandex-search)는 Bright Data의 [SERP Scraping API](https://brightdata.co.kr/products/serp-api) 제품군의 일부입니다. 업계 선도적인 [プロキシ 인프라](https://brightdata.co.kr/proxy-types)를 활용하여 단 한 번의 API 호출로 실시간 Yandex 검색 결과를 제공합니다.
+[Yandex Search API](https://brightdata.co.kr/products/serp-api/yandex-search)는 Bright Data의 [SERP Scraping API](https://brightdata.co.kr/products/serp-api) 제품군의 일부입니다. 업계 선도적인 [프록시 인프라](https://brightdata.co.kr/proxy-types)를 활용하여 단 한 번의 API 호출로 실시간 Yandex 검색 결과를 제공합니다.
 
 ### Key Benefits
 
 - **Global Accuracy**: 전 세계 특정 지역에 맞춘 결과를 얻을 수 있습니다
-- **Pay-Per-Success**: 성공한 リクエスト에 대해서만 비용을 지불합니다
+- **Pay-Per-Success**: 성공한 요청에 대해서만 비용을 지불합니다
 - **Real-Time Data**: 최신 검색 결과를 몇 초 내로 액세스할 수 있습니다
-- **Unlimited Scalability**: 대용량 スクレイピング을 손쉽게 처리합니다
+- **Unlimited Scalability**: 대용량 스크레이핑을 손쉽게 처리합니다
 - **Cost-Efficient**: 비용이 많이 드는 인프라 필요성을 제거합니다
 - **Reliable Performance**: 내장된 차단 방지 기술을 제공합니다
 - **24/7 Expert Support**: 필요 시 언제든지 기술 지원을 받을 수 있습니다
@@ -113,7 +113,7 @@ Yandex는 자동화된 데이터 추출을 방지하기 위해 엄격하고 지�
 
 ### Direct API Access
 
-API를 사용하는 가장 간단한 방법은 Bright Data의 API エンドポイント로 직접 リクエスト를 보내는 것입니다.
+API를 사용하는 가장 간단한 방법은 Bright Data의 API 엔드포인트로 직접 요청를 보내는 것입니다.
 
 **cURL Example:**
 
@@ -154,7 +154,7 @@ print("Response saved!")
 
 ### Native Proxy-Based Access
 
-이 대체 방법은 검색 결과에 직접 액세스하기 위해 プロキシ 라우팅을 사용합니다.
+이 대체 방법은 검색 결과에 직접 액세스하기 위해 프록시 라우팅을 사용합니다.
 
 **cURL Example:**
 
@@ -191,12 +191,12 @@ with open("yandex-scraper-api-result.html", "w", encoding="utf-8") as file:
 print("Response saved!")
 ```
 
-> **Note:** 네이티브 プロキシ 접근 방식을 사용할 때에는, 프로덕션 사용을 위해 Bright Data의 SSL 인증서를 설치하는 것을 권장합니다. 자세한 내용은 [SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate)에서 확인하십시오.
+> **Note:** 네이티브 프록시 접근 방식을 사용할 때에는, 프로덕션 사용을 위해 Bright Data의 SSL 인증서를 설치하는 것을 권장합니다. 자세한 내용은 [SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate)에서 확인하십시오.
 > 
 
 👉 [full HTML output](https://github.com/bright-kr/yandex-api/blob/main/yandex-scraper-api-output/yandex-scraper-api-result.html)을 확인해 보시기 바랍니다
 
-*`lr` 및 `lang`과 같은 쿼리 パラメータ는 다음 섹션에서 설명합니다.*
+*`lr` 및 `lang`과 같은 쿼리 매개변수는 다음 섹션에서 설명합니다.*
 
 
 ## Yandex Search Query Parameters
@@ -205,7 +205,7 @@ print("Response saved!")
 
 #### Region (`lr`)
 
-이 パラメータ는 검색 결과에 대해 타겟팅할 지리적 지역 또는 국가를 정의합니다.
+이 매개변수는 검색 결과에 대해 타겟팅할 지리적 지역 또는 국가를 정의합니다.
 
 | Region | Code |
 | --- | --- |
@@ -249,7 +249,7 @@ https://www.yandex.com/search/?text=local+sports+news&lang=es
 
 각 Yandex SERP 페이지는 일반적으로 10개의 결과를 반환합니다.
 
-예시 - "nike running shoes"에 대해 3페이지(결과 21-30)를 スクレイピング하십시오:
+예시 - "nike running shoes"에 대해 3페이지(결과 21-30)를 스크레이핑하십시오:
 
 ```bash
 https://www.yandex.com/search/?text=nike+running+shoes&p=2
@@ -310,7 +310,7 @@ https://www.yandex.com/search/?text=how+to+learn+python&brd_browser=safari
 
 ## **Practical Example**
 
-포괄적인 타겟팅을 위해 여러 パラメータ를 결합할 수 있습니다:
+포괄적인 타겟팅을 위해 여러 매개변수를 결합할 수 있습니다:
 
 ```bash
 https://www.yandex.com/search/?text=organic+skincare+products
